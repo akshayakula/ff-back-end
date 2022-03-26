@@ -1,0 +1,22 @@
+{
+  "name": "ff-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshayakula/ff-back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshayakula/ff-back-end/issues"
+  },
+  "homepage": "https://github.com/akshayakula/ff-back-end#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

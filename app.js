@@ -143,7 +143,12 @@ app.post('/sendAddress', jsonParser , async (req, res) => {
 
     await new Promise(r => setTimeout(r, 2000));
 
-    res.send(`${curr_link}`);
+    let payload = {
+        link: `${curr_link}`,
+        points: nearest
+    }
+
+    res.send(payload);
 })
 
 client.login(keys.discord_bot_token)

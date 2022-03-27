@@ -18,7 +18,8 @@ app.listen(port, () => {
   console.log(`Example app listening at ${keys.local_url}:${port}`)
 })
 
-express.static('./public')
+app.use(express.static('./public'))
+
 
 client.on('ready', (message) => {
 

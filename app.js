@@ -143,3 +143,29 @@ app.get('/sendAddress', jsonParser , async (req, res) => {
 })
 
 client.login(keys.discord_bot_token)
+
+// ## Inspiration
+
+// Being college students in a town with poor public transportation and no car has made us realize the impact of food accessibility to our health. Always low on time and options it just becomes much easier to reach for long lasting unhealthy options that can be stocked up on (ex. Ramen, Chips). After dealing with this issue for two years, my neighbors and I developed a system of getting groceries that allows me to ride along with them and shop healthy options weekly.
+
+// ## What it does
+
+// FoodFyte is a community and community building platform. Simply input your address with autocomplete and we'll create and link you to a discord channel specially designed to optimize time. Community channels will have multiple grocery stores in a common vicinity if they are in a food rich region, and will have at least 1 in food desert areas.
+
+// ## How we built it
+ 
+// The application consists of 3 components. Users first reach the landing page front end vanilla javascript web-page. Google Api is ingrates into the web-page for auto complete and coordinate data. Vanilla JS was chosen for its significant performance (Very extreme difference) from react npm packages for the same purpose. The web-page interfaces with a Node.js backend thats uses discord.js and discord web hooks to interact with the discord server.
+
+// ## Challenges we ran into
+
+// One of the biggest challenges was interfacing with Discord API. We had to exploit discord bot's privileges and trigger them with a message which could be sent through a web hook, in order to link the node to the discord. Another challenge was performance with the google maps auto complete on the front end. Of course we also had lots of adjustments with the front end and making sure it was responsive and bug free for an array of screen sizes.
+
+
+// ## Accomplishments that we're proud of
+
+// We are very proud of the level of polishing we put into the front end and the overall performance and responsiveness. It was a huge thing for us to have a project that is already ready to help build communities, so that our users can add value to each other.
+
+// ## What we learned
+
+## What's next for FoodFyte
+

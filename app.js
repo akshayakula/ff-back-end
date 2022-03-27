@@ -9,12 +9,16 @@ const keys = require('./keys.json')
 const command = require('./command')
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 var cors = require('cors');
+const { application } = require('express')
 app.use(cors());
+// app.use(express.static('public'))
 let curr_link = ""
 
 app.listen(port, () => {
   console.log(`Example app listening at ${keys.local_url}:${port}`)
 })
+
+express.static('./public')
 
 client.on('ready', (message) => {
 

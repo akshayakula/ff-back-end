@@ -8,7 +8,8 @@ const { Client, Intents } = require('discord.js')
 const keys = require('./keys.json')
 const command = require('./command')
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-
+var cors = require('cors');
+app.use(cors());
 let curr_link = ""
 
 app.listen(port, () => {
@@ -90,11 +91,14 @@ app.get('/createChannel', async (req, res) => {
 })
 
 
-app.get('/sendAddress', jsonParser , async (req, res) => {
+app.post('/sendAddress', jsonParser , async (req, res) => {
 
 
     let lat = req.body.lat;
     let lon = req.body.lon;
+    console.log(req.body)
+    console.log(lon)
+
     let n_lat = parseFloat(lat) 
     let n_lon = parseFloat(lon)
 

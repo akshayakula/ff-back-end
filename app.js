@@ -13,7 +13,7 @@ app.use(cors());
 let curr_link = ""
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at ${keys.local_url}:${port}`)
 })
 
 client.on('ready', (message) => {
@@ -86,7 +86,7 @@ app.get('/createChannel', async (req, res) => {
     // client.guilds.channels.create("test", {type: 'text'}).then( ch => console.log(ch));
 
 
-    console.log(client.guilds);
+    res.send('hi')
      
 })
 
